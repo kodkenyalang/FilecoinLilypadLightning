@@ -1,0 +1,184 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+:root {
+  --primary-color: #5E35B1; /* Violet */
+  --primary-light: #7E57C2;
+  --primary-dark: #4527A0;
+  --secondary-color: #1E88E5; /* Azure Blue */
+  --secondary-light: #42A5F5;
+  --secondary-dark: #1565C0;
+  --text-light: #FFFFFF;
+  --text-dark: #212121;
+  --text-medium: #757575;
+  --background-light: #F5F7FA;
+  --background-white: #FFFFFF;
+  --success-color: #4CAF50;
+  --error-color: #F44336;
+  --warning-color: #FF9800;
+  --info-color: #2196F3;
+  --card-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--background-light);
+  color: var(--text-dark);
+}
+
+/* Material theme overrides */
+.mat-primary {
+  background-color: var(--primary-color) !important;
+  color: var(--text-light) !important;
+}
+
+.mat-accent {
+  background-color: var(--secondary-color) !important;
+  color: var(--text-light) !important;
+}
+
+/* Common card styling */
+.app-card {
+  background-color: var(--background-white);
+  border-radius: 8px;
+  box-shadow: var(--card-shadow);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.app-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* Professional typography */
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  font-weight: 500;
+  color: var(--primary-dark);
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1.25rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Button styling */
+.app-button {
+  border-radius: 4px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  padding: 0.5rem 1.25rem;
+}
+
+.app-button-primary {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  border: none;
+}
+
+.app-button-primary:hover {
+  background-color: var(--primary-dark);
+  box-shadow: 0 4px 8px rgba(94, 53, 177, 0.3);
+}
+
+.app-button-secondary {
+  background-color: var(--secondary-color);
+  color: var(--text-light);
+  border: none;
+}
+
+.app-button-secondary:hover {
+  background-color: var(--secondary-dark);
+  box-shadow: 0 4px 8px rgba(30, 136, 229, 0.3);
+}
+
+/* Utility classes */
+.text-primary {
+  color: var(--primary-color);
+}
+
+.text-secondary {
+  color: var(--secondary-color);
+}
+
+.text-success {
+  color: var(--success-color);
+}
+
+.text-error {
+  color: var(--error-color);
+}
+
+.text-warning {
+  color: var(--warning-color);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.container {
+  padding: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Animation for charts and data visualization */
+.fadeIn {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive layout helpers */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+  
+  .app-card {
+    padding: 1rem;
+  }
+  
+  h1 {
+    font-size: 1.75rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+  
+  h3 {
+    font-size: 1.25rem;
+  }
+}
